@@ -4,11 +4,13 @@ Created on Sat Jun  5 10:54:15 2021
 
 @author: nisha
 """
+# Define List, Tuple, Dictionary (key-value pairs), Set
 my_list = ["A", "B", "C", "D", 1, 2, 3, 4, 5]
 my_tuple = ("A", "B", "C", "D", "EF", "GHI", 1.0, 2.35)
 my_dict = {"A":"a", "B":"b", "C":"c", "D":"d", "G":"g", "X":"x", "Z":"z"}
 my_set = {'A', 'B', 'C', 'D', 'E'}
 
+# Define a class
 class myClass:
     a = 10
     def __init__(self, a):
@@ -42,10 +44,12 @@ class myClass:
 # Import pandas library
 import pandas as pd
   
-# Initialize list of lists
+# Initialize a list of lists
 my_data = [['Nisha', 50, 10.2, 5], ['Thom', 55, 15.2,5], ['Yogita', 54, 11.2,5]]
+# Create a dataframe
 my_df=pd.DataFrame(my_data, columns = ['Name', 'Score', 'Age', 'Rating'])
 
+#Function definition to check datatypes of an input object
 def datatype_check(dat_type):       
        if(type(dat_type)) in (list,set,tuple,dict):
               print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~=====~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
@@ -78,6 +82,7 @@ def datatype_check(dat_type):
        else :
               print("Type of input dataset not defined in the function yet :-)")
               
+# Test function
 datatype_check(my_list)
 datatype_check(my_tuple)
 datatype_check(my_dict)
@@ -87,5 +92,6 @@ datatype_check(my_df)
 datatype_check(myClass)
 # class instantiation
 myClassInst=myClass(5.2)
+
 datatype_check(myClassInst)
 datatype_check(datatype_check)
